@@ -3,16 +3,22 @@ import landing from "../assets/landing.jpg"
 import ProjectPopup from './ProjectPopup'
 import { FaArrowRight } from 'react-icons/fa'
 import projects from '../store'
+import { motion } from 'framer-motion'
 
 const ProjectsComponents= ({details,setPopup})=>{
     return(
-    <div className='flex flex-col gap-2 justify-start drop-shadow-xl  p-4 rounded-md bg-lblack' onClick={()=>setPopup({showPopup:true,id:details.id})}>
+    <motion.div 
+    initial={{opacity:0,x:-100}}
+    whileInView={{opacity:1,x:0}}
+    transition={{duration:1}}
+    viewport={{once:true}}
+    className='flex flex-col gap-2 justify-start drop-shadow-xl  p-4 rounded-md bg-lblack' onClick={()=>setPopup({showPopup:true,id:details.id})}>
         <div className='w-80 h-80 md:w-5xl md:h-92 bg-vlblack drop-shadow-5xl'>
             <img src={details.coverImg} className=' bg-vlblack drop-shadow-xl object-contain p-2 w-80 h-80 md:w-5xl md:h-92 rounded-md'/>
         </div>
         <h1 className='text-xl text-white font-bold'>{details.title}</h1>
         <p className='text-red flex gap-2 items-center'><span >KNOW MORE</span> <FaArrowRight/></p>
-    </div>
+    </motion.div>
     )
 }
 const Projects = () => {

@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import landing from "../assets/samuel.png"
 import { ReactTyped } from 'react-typed'
+import { motion } from 'framer-motion'
 
 
 const Landing = () => {
 
   return (
-    <div className='flex gap-8 text-white items-center p-8 pt-16 lg:p-20' >
+    <motion.div 
+    className='flex gap-8 text-white items-center p-8 pt-16 lg:p-20' >
         <div className='rounded-full w-96'>
             <img src={landing} alt="" className='  lg:w-lg lg:h-96 bg-red rounded-full'/>
         </div>
@@ -16,7 +18,7 @@ const Landing = () => {
             <div className='text-sm'><ReactTyped strings={["Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, modi. Quas illo illum obcaecati incidunt totam soluta deserunt, enim itaque vero magni similique recusandae sequi consequatur corporis expedita maiores cumque."]} typeSpeed={50}/></div>
             <button className='text-white bg-red px-4 py-1.5 w-fit'>ABOUT ME</button>
         </div>
-    </div>
+    </motion.div>
   )
 }
 
