@@ -10,7 +10,7 @@ const ProjectPopup = ({popup,setPopup}) => {
             <div className='overflow-y-auto flex flex-col gap-4  items-center h-full'>
                 <h1 className='text-xl font-bold'>{project.title}</h1>
                 <p>description</p>
-                <img src={project.mainImg} className='w'/>
+                <img src={project.mainImg} className='w-full'/>
             </div>
         </div>
     </div>
