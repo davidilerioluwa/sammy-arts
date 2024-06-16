@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 
 const ExperienceComponent =()=>{
-    return(<div className='bg-vlblack px-4 md:px-12 py-4 drop-shadow-xl'>
+    return(<div className='bg-vlblack px-4 md:px-12 py-4 drop-shadow-xl rounded-md'>
         <h1 className='text-xl text-center text-red'>60+</h1>
         <p className='text-center text-white '>Clients</p>
     </div>)

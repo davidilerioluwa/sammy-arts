@@ -12,8 +12,8 @@ const ProjectsComponents= ({details,setPopup})=>{
     whileInView={{opacity:1,x:0}}
     transition={{duration:1}}
     viewport={{once:true}}
-    className='flex flex-col gap-2 justify-start drop-shadow-xl  p-4 rounded-md bg-lblack' onClick={()=>setPopup({showPopup:true,id:details.id})}>
-        <div className='w-80 h-80 md:w-5xl md:h-92 bg-vlblack drop-shadow-5xl'>
+    className='flex flex-col gap-2 justify-start drop-shadow-xl cursor-pointer  p-4 rounded-md bg-lblack' onClick={()=>setPopup({showPopup:true,id:details.id})}>
+        <div className='w-80 h-80 md:w-5xl md:h-92 bg-vlblack  rounded-md drop-shadow-5xl'>
             <img src={details.coverImg} className=' bg-vlblack drop-shadow-xl object-contain p-2 w-80 h-80 md:w-5xl md:h-92 rounded-md'/>
         </div>
         <h1 className='text-xl text-white font-bold'>{details.title}</h1>
@@ -32,7 +32,7 @@ const Projects = () => {
                 <h1 className='text-xl lg:text-2xl font-bold'>FEATURED PROJECTS</h1>
                 <p>Lorem ipsum dolor sit.</p>
             </div>
-            <button className='bg-red text-white px-6 py-2'>VIEW ALL</button>
+            <button className='bg-red text-white px-6 py-4 rounded-md h-fit'>VIEW ALL</button>
         </div>
         <div className='grid md:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-12 lg:px-20'>
             {projects.map((details)=><ProjectsComponents details={details} setPopup={setPopup}/>)}

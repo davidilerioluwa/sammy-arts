@@ -15,7 +15,7 @@ const ServiceTile = ({active,setActive,title}) => {
     }
   return (
     <Tilt options={defaultOptions}>
-        <div className={` drop-shadow-xl text-white flex flex-col px-8 py-12 gap-4  w-60 lg:w-72 cursor-pointer ${active === title?"bg-red":"bg-vlblack"}`} onClick={()=>setActive(title)}>
+        <div className={` drop-shadow-xl rounded-md text-white flex flex-col px-8 py-12 gap-4  w-60 lg:w-72 cursor-pointer ${active === title?"bg-red":"bg-vlblack"}`} onClick={()=>setActive(title)}>
             <span>ICon</span>
             <h1 className='text-xl font-bold'>{title}</h1>
             <span className='text-sm'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, tenetur.</span>

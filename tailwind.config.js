@@ -37,6 +37,7 @@ export default {
       vlblue: "#96C1EA",
       lblue: "rgba(150, 193, 234, 0.20)",
       red: "orange",
+      green:"green",
       branddark: "#292D32",
       brandlight: "rgba(117, 194, 246, 0.20)"
     },
