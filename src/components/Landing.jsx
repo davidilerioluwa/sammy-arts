@@ -14,18 +14,18 @@ const Landing = () => {
     whileInView={{opacity:1,x:0}}
     transition={{duration:1}}
     viewport={{once:true}}
-    className='flex relative gap-8 text-white items-center lg:h-screen lg:w-fit p-8 pt-16 lg:p-20 bg-white bg-clip-padding backdrop-filter backdrop-blur-md  bg-opacity-20' >
+    className='flex relative gap-8 text-white items-center lg:h-screen lg:w-fit p-8 pt-16 lg:p-20 bg-white bg-clip-padding backdrop-filter backdrop-blur-sm  bg-opacity-20' >
         {popup?<BioPopup setPopup={setPopup}/>:""}
         <div className='rounded-full w-96'>
             <img src={landing} alt="" className='  lg:w-lg lg:h-96 bg-red rounded-full'/>
         </div>
         <div className='flex flex-col text-left w-fit lg:max-w-lg gap-4'>
             <motion.div 
-             initial={{opacity:0,y:-200}}
+             initial={{opacity:0,y:-100}}
              whileInView={{opacity:1,y:0}}
              transition={{duration:2}}
              viewport={{once:true}}
-            className={`text-red md:text-lg text-nowrap`}><ReactTyped strings={["Hi, i'm Sammyarts"]} typeSpeed={100} /></motion.div>
+            className={`text-red md:text-xl text-nowrap`}><ReactTyped strings={["Hi, i'm Sammyarts"]} typeSpeed={100} /></motion.div>
             <motion.h1 
              initial={{opacity:0,x:200}}
              whileInView={{opacity:1,x:0}}
