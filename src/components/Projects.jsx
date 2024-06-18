@@ -8,9 +8,9 @@ import { motion } from 'framer-motion'
 const ProjectsComponents= ({details,setPopup})=>{
     return(
     <motion.div 
-    initial={{opacity:0,x:-100}}
+    initial={{opacity:0,x:-200}}
     whileInView={{opacity:1,x:0}}
-    transition={{duration:1}}
+    transition={{duration:2}}
     viewport={{once:true}}
     className='flex flex-col gap-2 justify-start drop-shadow-xl cursor-pointer  p-4 rounded-md bg-lblack' onClick={()=>setPopup({showPopup:true,id:details.id})}>
         <div className='w-80 h-80 md:w-5xl md:h-92 bg-vlblack  rounded-md drop-shadow-5xl'>

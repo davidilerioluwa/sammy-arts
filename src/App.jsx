@@ -7,6 +7,8 @@ import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import ContactForm from './components/ContactForm'
+import TorusCanvas from './components/TorusCanvas'
+import EarthCanvas from './components/canvas/Earth'
 const App = () => {
   const projectsRef= useRef(null)
   const contactsRef= useRef(null)
@@ -14,7 +16,15 @@ const App = () => {
   return (
     <div className='bg-lblack'>
       <Navbar projectsRef={projectsRef} contactsRef={contactsRef}/>
-      <Landing/>
+      <div className='relative z-30'>
+        <div className='absolute top-0 w-full h-full'>
+          {/* <TorusCanvas/> */}
+          <EarthCanvas/>
+          {/* <h1 className='text-9xl text-white'>LETS GO</h1> */}
+        </div>
+        <Landing/>
+      </div>
+      
       <div className='relative'>
         <div className='absolute h-full w-1/2 bg-vlblack z-10'></div>
         <Services/>
