@@ -16,7 +16,7 @@ const App = () => {
   return (
     <div className='bg-lblack'>
       <Navbar projectsRef={projectsRef} contactsRef={contactsRef}/>
-      <div className='relative z-30'>
+      <div className='relative z-20'>
         <div className='absolute top-0 w-full h-full'>
           {/* <TorusCanvas/> */}
           <EarthCanvas/>

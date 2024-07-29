@@ -14,7 +14,7 @@ const Landing = () => {
     whileInView={{opacity:1,x:0}}
     transition={{duration:1}}
     viewport={{once:true}}
-    className='flex relative gap-8 text-white items-center lg:h-screen lg:w-fit p-8 pt-16 lg:p-20 bg-white bg-clip-padding backdrop-filter backdrop-blur-sm  bg-opacity-20' >
+    className='flex relative gap-8 z-20 text-white items-center lg:h-screen lg:w-fit p-8 pt-16 lg:p-20 bg-white bg-clip-padding backdrop-filter backdrop-blur-sm  bg-opacity-20' >
         {popup?<BioPopup setPopup={setPopup}/>:""}
         <div className='rounded-full w-96'>
             <img src={landing} alt="" className='  lg:w-lg lg:h-96 bg-red rounded-full'/>

@@ -5,8 +5,8 @@ const ImagePopup=({project,imageIndex,setShowFullImage})=>{
   const src=`${project.images[imageIndex]}HD.png`
   console.log(src);
   
-  return(<div style={{zIndex:200000}} className='bg-black fixed top-0 left-0  w-screen h-screen px-4 rounded-md'>
-     <span className='absolute top-16 right-4 lg:top-20 lg:right-20 bg-red px-4 py-2 cursor-pointer rounded-md' onClick={()=>setShowFullImage(false)}>X</span>
+  return(<div  className='bg-black fixed top-0 left-0 z-50 w-screen h-screen px-4 rounded-md'>
+     <span className='absolute top-4 right-10  bg-red px-4 py-2 cursor-pointer rounded-md' onClick={()=>setShowFullImage(false)}>X</span>
       
       <div style={{paddingTop:"400px"}} className=' flex justify-center items-center  w-full h-full p-4 overflow-y-auto'>
         {/* <div className='text-white'>h</div> */}
