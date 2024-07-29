@@ -14,6 +14,7 @@ const ProjectsComponents= ({details,setPopup})=>{
     viewport={{once:true}}
     className='flex flex-col gap-2 justify-start drop-shadow-xl cursor-pointer  p-4 rounded-md bg-lblack' onClick={()=>setPopup({showPopup:true,id:details.id})}>
         <div className='w-80 h-80 md:w-5xl md:h-92 bg-vlblack  rounded-md drop-shadow-5xl'>
+            
             <img src={details.coverImg} className=' bg-vlblack drop-shadow-xl object-contain p-2 w-80 h-80 md:w-5xl md:h-92 rounded-md'/>
         </div>
         <h1 className='text-xl text-white font-bold'>{details.title}</h1>
@@ -23,6 +24,7 @@ const ProjectsComponents= ({details,setPopup})=>{
 }
 const Projects = () => {
     const [popup,setPopup]= useState({showPopup:false,id:null})
+
 
   return (
     <section className='flex flex-col items-center justify-center'>
