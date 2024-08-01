@@ -8,7 +8,7 @@ const ImagePopup=({project,imageIndex,setShowFullImage})=>{
   return(<div  className='bg-black fixed top-0 left-0 z-50 w-screen h-screen px-4 rounded-md'>
      <span className='absolute top-4 right-10  bg-red px-4 py-2 cursor-pointer rounded-md' onClick={()=>setShowFullImage(false)}>X</span>
       
-      <div style={{paddingTop:"400px"}} className=' flex justify-center items-center  w-full h-full p-4 overflow-y-auto'>
+      <div  className=' flex justify-center items-center  w-full h-full p-4 sm:pt-60 md:pt-80 lg:pt-[400px] overflow-y-auto'>
         {/* <div className='text-white'>h</div> */}
         <img src={src} style={{width:"1000px"}} className=' object-contain '/>
       </div>
@@ -19,7 +19,7 @@ const ProjectPopup = ({popup,setPopup}) => {
     const [showFullImage,setShowFullImage]=useState(false)
     const [imageIndex,setImageIndex]=useState(0)
   return (
-    <div className='bg-black w-screen h-screen fixed top-0 z-30 pt-16 lg:pt-20 px-4 lg:px-40 pb-10 rounded-md'>
+    <div className='bg-black w-screen h-screen fixed top-0 z-30 pt-16 lg:pt-20 px-4 lg:px-20 xl:px-40 pb-10 rounded-md'>
         {showFullImage?<ImagePopup project={project} imageIndex={imageIndex} setShowFullImage={setShowFullImage}/>:""}
         <div className='relative text-white h-full bg-lblack p-4 lg:p-12 rounded-md '>
             <span className='absolute top-2 right-2 bg-red px-4 py-2 cursor-pointer rounded-md' onClick={()=>setPopup({showPopup:false})}>X</span>
